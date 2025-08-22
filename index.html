@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casino Lennon – Bono de $50.000 por WhatsApp</title>
+  <meta name="description" content="Casino Lennon: reclamá $50.000 en créditos promocionales al registrarte por WhatsApp. Tragamonedas, ruleta, blackjack y más. Juego responsable +18." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#1c002b; --bg2:#000; --primary:#8a2be2; --accent:#25D366; --gold:#FFD700; --danger:#ff3d71;
+      --txt:#f5f5f7; --muted:#c9c9d1; --chip:#ff4d94; --chip2:#00e5ff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family:'Poppins', Arial, sans-serif; background: radial-gradient(1200px 800px at 30% -10%, #3a0064, transparent), linear-gradient(180deg, var(--bg1), var(--bg2)); color:var(--txt);}
+    a{color:inherit; text-decoration:none}
+    .container{width:100%; max-width:1180px; margin:0 auto; padding:24px}
+
+    /* HERO */
+    .hero{position:relative; overflow:hidden; padding:72px 24px 40px; text-align:center;}
+    .glow{position:absolute; inset:-20%; background:radial-gradient(circle at 50% 30%, rgba(138,43,226,.35), transparent 60%), radial-gradient(circle at 80% 10%, rgba(255,215,0,.25), transparent 55%);}    
+    .hero-inner{position:relative; z-index:2}
+    .logo img{max-width:320px; width:90%; height:auto; filter:drop-shadow(0 6px 18px rgba(0,0,0,.45));}
+    .badge{display:inline-flex; align-items:center; gap:8px; background:rgba(255,215,0,.12); color:var(--gold); border:1px solid rgba(255,215,0,.35); padding:8px 14px; border-radius:999px; font-weight:700; margin:18px 0 10px}
+    .title{font-size:clamp(28px, 5vw, 52px); line-height:1.05; font-weight:800; margin:10px 0 14px}
+    .subtitle{font-size:clamp(16px, 2.5vw, 20px); color:var(--muted); margin:0 auto 18px; max-width:760px}
+
+    /* BONUS CARD */
+    .bonus-card{position:relative; display:grid; gap:14px; place-items:center; margin:22px auto; padding:22px; max-width:860px; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.15); border-radius:24px; box-shadow:0 10px 40px rgba(0,0,0,.45)}
+    .bonus-chip{position:absolute; width:120px; height:120px; background:conic-gradient(from 0deg, var(--chip), var(--chip2)); border-radius:50%; filter:blur(28px); opacity:.35; top:-20px; left:-20px}
+    .bonus-cta{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; align-items:center}
+    .bonus-amount{font-size:clamp(28px, 6vw, 56px); font-weight:800; letter-spacing:.5px; color:white; text-shadow:0 2px 18px rgba(138,43,226,.45)}
+    .bonus-small{font-size:14px; color:var(--muted)}
+
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; border:none; cursor:pointer; padding:16px 26px; border-radius:999px; font-weight:800; font-size:18px; transition:.25s transform, .25s box-shadow, .25s opacity}
+    .btn:active{transform:translateY(1px)}
+    .btn-whatsapp{background:var(--accent); color:#001b09; box-shadow:0 8px 24px rgba(37,211,102,.35); animation:pulse 2s infinite}
+    .btn-whatsapp:hover{box-shadow:0 12px 36px rgba(37,211,102,.55); transform:translateY(-1px)}
+    .btn-ghost{background:transparent; border:1px solid rgba(255,255,255,.2); color:white}
+
+    @keyframes pulse{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.08)}
+      100%{transform:scale(1)}
+    }
+
+    .timer{display:inline-flex; gap:10px; font-weight:700; margin-top:6px; color:#fff}
+    .timer .unit{background:rgba(255,255,255,.08); padding:8px 10px; border-radius:10px; min-width:50px}
+
+    /* FEATURES */
+    .features{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin:26px auto; max-width:980px}
+    .feature{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); padding:18px; border-radius:18px; text-align:left}
+    .feature h3{margin:0 0 6px; font-size:18px}
+    .feature p{margin:0; color:var(--muted); font-size:14px}
+
+    /* STEPS */
+    .steps{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin:36px auto; max-width:980px}
+    .step{background:linear-gradient(180deg, rgba(138,43,226,.18), rgba(255,255,255,.04)); border:1px solid rgba(138,43,226,.35); border-radius:18px; padding:18px; text-align:left}
+    .step .n{display:inline-block; background:rgba(255,215,0,.2); color:var(--gold); padding:6px 10px; border-radius:12px; font-weight:700; margin-bottom:10px}
+    .step h4{margin:4px 0 8px}
+    .step p{margin:0; color:var(--muted)}
+
+    /* CTA STRIP */
+    .cta-strip{position:sticky; bottom:16px; margin:40px auto 0; width:fit-content; background:linear-gradient(90deg, rgba(255,255,255,.1), rgba(255,255,255,.04)); border:1px solid rgba(255,255,255,.18); border-radius:999px; padding:10px; box-shadow:0 12px 40px rgba(0,0,0,.45); z-index:5}
+
+    /* TRUST / SOCIAL PROOF */
+    .trust{margin:16px auto 0; max-width:860px; color:var(--muted); font-style:italic}
+
+    /* FOOTER */
+    footer{margin-top:46px; padding:28px 24px; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border-top:1px solid rgba(255,255,255,.12)}
+    .footer-grid{display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:18px; max-width:1180px; margin:0 auto}
+    .footer-grid h5{margin:0 0 10px}
+    .fine{color:var(--muted); font-size:12px; line-height:1.5}
+
+    /* MOBILE */
+    @media (max-width: 900px){
+      .features,.steps,.footer-grid{grid-template-columns:1fr}
+      .cta-strip{position:fixed; left:50%; transform:translateX(-50%)}
+    }
+
+    /* Floating chips */
+    .chip, .chip2, .chip3{position:absolute; border-radius:50%; opacity:.8; animation:float 8s ease-in-out infinite alternate}
+    .chip{width:18px; height:18px; background:var(--chip); top:16%; left:8%}
+    .chip2{width:14px; height:14px; background:var(--chip2); top:66%; right:12%; animation-duration:9s}
+    .chip3{width:12px; height:12px; background:#ffd166; top:22%; right:24%; animation-duration:7s}
+    @keyframes float{from{transform:translateY(0)} to{transform:translateY(-12px)}}
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="glow"></div>
+    <div class="chip"></div><div class="chip2"></div><div class="chip3"></div>
+    <div class="hero-inner container">
+      <div class="logo">
+        <!-- Reemplazá asd.jpg por tu logo real -->
+        <img src="asd.jpg" alt="Casino Lennon Logo" />
+      </div>
+
+      <div class="badge">✔ Plataforma verificada • Pagos rápidos • +18</div>
+
+      <h1 class="title">Bienvenido a <span style="color:var(--gold)">Casino Lennon</span></h1>
+      <p class="subtitle">Vení a jugar a los mejores slots, ruleta y blackjack con un <strong>bono exclusivo</strong>. Registrate por WhatsApp y arrancá con ventaja.</p>
+
+      <div class="bonus-card">
+        <div class="bonus-chip"></div>
+        <div class="bonus-cta">
+          <div>
+            <div class="bonus-amount">$50.000 ARS de <span style="color:var(--gold)">BONO</span></div>
+            <div class="bonus-small">para jugar en tu <strong>primer registro</strong> vía WhatsApp</div>
+            <div class="timer" id="timer" aria-label="Cuenta regresiva"></div>
+          </div>
+          <a href="https://wa.me/5491131008907" class="btn btn-whatsapp" id="waBtnTop" target="_blank" rel="noopener noreferrer">Reclamar por WhatsApp</a>
+          <a href="#como-funciona" class="btn btn-ghost">¿Cómo funciona?</a>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Depósitos y retiros ágiles</h3>
+          <p>Operá con los métodos más usados en Argentina. Sin vueltas, sin demoras.</p>
+        </div>
+        <div class="feature">
+          <h3>Juegos top</h3>
+          <p>Tragamonedas, ruleta, blackjack y en vivo. Diversión 24/7.</p>
+        </div>
+        <div class="feature">
+          <h3>Atención por WhatsApp</h3>
+          <p>Soporte humano para ayudarte a activar tu bono y empezar a jugar.</p>
+        </div>
+      </div>
+
+      <div id="como-funciona" class="steps">
+        <div class="step">
+          <span class="n">1</span>
+          <h4>Escribinos por WhatsApp</h4>
+          <p>Tocá en “Reclamar por WhatsApp” y enviá <strong>ALTA BONO</strong>.</p>
+        </div>
+        <div class="step">
+          <span class="n">2</span>
+          <h4>Creá tu cuenta</h4>
+          <p>Completá el registro. ¡Listo! Te acreditamos <strong>$50.000</strong> promocionales.</p>
+        </div>
+        <div class="step">
+          <span class="n">3</span>
+          <h4>Jugá y ganá</h4>
+          <p>Usá tu saldo en juegos seleccionados. Retirá tus ganancias según términos.</p>
+        </div>
+      </div>
+
+      <p class="trust">⭐️⭐️⭐️⭐️⭐️ Opiniones excelentes de jugadores reales. Miles de usuarios activan el bono cada día.</p>
+
+      <div class="cta-strip">
+        <a href="https://wa.me/5491131008907" class="btn btn-whatsapp" id="waBtnSticky" target="_blank" rel="noopener noreferrer">Activar bono de $50.000</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h5>Promoción</h5>
+        <p class="fine">Bono promocional de <strong>$50.000 ARS</strong> válido solo para <strong>primer registro</strong> realizado vía WhatsApp. Se acredita como crédito promocional, utilizable en juegos seleccionados. Requiere verificación de cuenta. Sujeto a <a href="#" style="text-decoration:underline">Términos y Condiciones</a> y requisitos de apuesta.</p>
+      </div>
+      <div>
+        <h5>Juego responsable</h5>
+        <p class="fine">Jugar con responsabilidad. Solo para mayores de 18 años. Si necesitás ayuda, contactá líneas de asistencia locales.</p>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <p class="fine">Atención 24/7 por WhatsApp. Consultas de verificación, depósitos y retiros.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Cuenta regresiva (10 minutos) para urgencia de bono
+    (function(){
+      var total = 10 * 60; // 10 minutos en segundos
+      var el = document.getElementById('timer');
+      function fmt(n){return n.toString().padStart(2,'0')}
+      function tick(){
+        var m = Math.floor(total/60), s = total%60;
+        el.innerHTML = '<span class="unit">'+fmt(m)+'</span> : <span class="unit">'+fmt(s)+'</span>'
+        if(total>0){ total--; setTimeout(tick, 1000);} else { el.innerHTML = '<span class="unit">00</span> : <span class="unit">00</span>'}
+      }
+      tick();
+    })();
+
+    // Agregar UTM a WhatsApp si hay URL params
+    (function(){
+      var params = window.location.search.replace(/^\?/,'');
+      if(!params) return;
+      ['waBtnTop','waBtnSticky'].forEach(function(id){
+        var a = document.getElementById(id); if(!a) return;
+        try{
+          var u = new URL(a.href); u.search = params; a.href = u.toString();
+        }catch(e){}
+      })
+    })();
+  </script>
+</body>
+</html>
